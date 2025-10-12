@@ -1,6 +1,7 @@
 import 'package:get_it/get_it.dart';
 import '../services/mesh_network_service.dart';
 import '../services/message_storage_service.dart';
+import '../services/emergency_service.dart';
 
 /// Global service locator instance
 final getIt = GetIt.instance;
@@ -18,6 +19,11 @@ Future<void> setupServiceLocator() async {
   // Mesh network service (singleton)
   getIt.registerLazySingleton<MeshNetworkService>(
     () => MeshNetworkService(),
+  );
+
+  // Emergency service (singleton)
+  getIt.registerLazySingleton<EmergencyService>(
+    () => EmergencyService(),
   );
 
   // TODO: Add more services as needed:

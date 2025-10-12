@@ -29,7 +29,6 @@ class CrisisMeshApp extends StatelessWidget {
         title: 'Crisis Mesh',
         theme: AppTheme.lightTheme,
         darkTheme: AppTheme.darkTheme,
-        themeMode: ThemeMode.system,
         home: const HomeScreen(),
         debugShowCheckedModeBanner: false,
       ),

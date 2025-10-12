@@ -213,7 +213,7 @@ class MeshNetworkService extends ChangeNotifier {
   /// Remove stale peers (not seen in a while)
   void _cleanupStalePeers() {
     final now = DateTime.now();
-    final staleThreshold = const Duration(minutes: 5);
+    const staleThreshold = Duration(minutes: 5);
     
     final staleIds = <String>[];
     _lastPeerUpdate.forEach((id, lastUpdate) {
@@ -249,7 +249,6 @@ class MeshNetworkService extends ChangeNotifier {
         name: 'User ${_peers.length + 1}',
         deviceType: 'Android',
         lastSeen: DateTime.now(),
-        status: PeerStatus.nearby,
         signalStrength: -65,
       );
 
