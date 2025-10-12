@@ -1,0 +1,22 @@
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    - prefer_const_constructors
+    - prefer_const_literals_to_create_immutables
+    - avoid_print
+    - prefer_single_quotes
+    - sort_pub_dependencies
+    - always_declare_return_types
+    - require_trailing_commas
+    - prefer_final_fields
+    - unnecessary_this
+    - prefer_relative_imports
+    - avoid_redundant_argument_values
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+  errors:
+    invalid_annotation_target: ignore
